@@ -5,7 +5,4 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Button = styled.button`
-  border: none;
-  border-radius: 2px;
-`;
+export const Button = styled.button<{ customType?: string }>``;

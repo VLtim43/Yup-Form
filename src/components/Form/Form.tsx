@@ -1,9 +1,8 @@
-import React from "react";
-import { useForm } from "react-hook-form";
 import * as S from "./styles";
+import { colors } from "../utils/colors";
 
 const Form = () => {
-  return <S.FormContainer></S.FormContainer>;
+  return <S.FormContainer backgroundColor={colors.palePink}></S.FormContainer>;
 };
 
 export default Form;

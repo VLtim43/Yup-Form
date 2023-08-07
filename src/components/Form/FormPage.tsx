@@ -1,4 +1,4 @@
-import Form from "./Form/Form";
+import Form from "./Form";
 
 const FormPage: React.FC = () => {
   return <Form />;

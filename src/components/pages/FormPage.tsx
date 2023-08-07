@@ -4,7 +4,7 @@ import { colors } from "../utils/colors";
 
 const FormPage = () => {
   return (
-    <S.FormPage backgroundColor={colors.palePink}>
+    <S.FormPage backgroundColor={colors.darkSlateBlue}>
       <Form />
     </S.FormPage>
   );

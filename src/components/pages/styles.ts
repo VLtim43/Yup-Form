@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormPage = styled.div<{ backgroundColor?: string }>`
+export const BackGround = styled.div<{ backgroundColor?: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,4 +12,10 @@ export const FormPage = styled.div<{ backgroundColor?: string }>`
   height: 100%;
   z-index: -1;
   background-color: ${(props) => props.backgroundColor};
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

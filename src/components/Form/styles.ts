@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div<{ backgroundColor?: string }>`
-  display: flex;
-  flex-direction: column;
   height: 80vh;
   width: 40vw;
 
@@ -22,4 +20,20 @@ export const FormContainer = styled.div<{ backgroundColor?: string }>`
   @media (min-width: 1700px) {
     width: 40vw;
   }
+`;
+
+export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
+  background-color: ${(props) => props.backgroundColor};
+  border-bottom-right-radius: 15px;
+
+  height: 15%;
+  width: 100%;
+`;
+
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 70%;
+  height: 85%;
 `;

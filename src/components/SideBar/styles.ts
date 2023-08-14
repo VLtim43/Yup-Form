@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SideContainer = styled.div<{ backgroundColor?: string }>`
   display: flex;
   flex-direction: column;
+
   height: 80vh;
   width: 24vw;
 
@@ -22,11 +23,31 @@ export const SideContainer = styled.div<{ backgroundColor?: string }>`
   @media (min-width: 1700px) {
     width: 24vw;
   }
+`;
 
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex: 1; /* Expand to take available space */
-  }
+export const Icon = styled.div<{ color?: string }>`
+  background-color: ${(props) => props.color};
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+`;
+
+export const Header = styled.h2``;
+
+export const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
 `;

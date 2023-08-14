@@ -23,9 +23,9 @@ const Form = () => {
   return (
     <S.FormContainer backgroundColor={colors.palePink}>
       <S.MainContainer>
-        {currentStep === 0 && <p>one</p>}
-        {currentStep === 1 && <p>two</p>}
-        {currentStep === 2 && <p>three</p>}
+        {currentStep === 0 && <p></p>}
+        {currentStep === 1 && <p></p>}
+        {currentStep === 2 && <p></p>}
       </S.MainContainer>
 
       <S.ButtonContainer backgroundColor={colors.lightCream}>

@@ -1,5 +1,5 @@
 import * as S from "./styles";
-
+import React from "react";
 type Props = {
   content?: string;
   type?: "button" | "submit" | "reset";

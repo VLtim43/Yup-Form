@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { colors } from "../utils/colors";
 
 export const SideContainer = styled.div<{ backgroundColor?: string }>`
   display: flex;
+  align-items: center;
   flex-direction: column;
 
   height: 80vh;
@@ -27,22 +29,23 @@ export const SideContainer = styled.div<{ backgroundColor?: string }>`
 
 export const Icon = styled.div<{ color?: string }>`
   background-color: ${(props) => props.color};
-  margin: 10px;
-  width: 40px;
-  height: 40px;
+  margin: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 `;
 
-export const Header = styled.h2``;
+export const Header = styled.h2`
+  font-size: 28px;
+  color: ${colors.lightCream};
+`;
 
 export const TextContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 30px 30px 12px 30px;
 `;
 
 export const ImageContainer = styled.div`

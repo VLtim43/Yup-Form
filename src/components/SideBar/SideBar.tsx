@@ -4,6 +4,7 @@ import { colors } from "../utils/colors";
 import image from "../../assets/duotone5.png";
 import { PawPrint } from "@phosphor-icons/react";
 import Steps from "../Steps/Steps";
+
 const SideBar = () => {
   return (
     <S.SideContainer backgroundColor={colors.darkSlateBlue}>
@@ -18,7 +19,7 @@ const SideBar = () => {
         </S.Icon>
         <S.Header>Dog Form</S.Header>
       </S.TextContainer>
-      <Steps activeStep={0} />
+      <Steps />
       <S.ImageContainer>
         <img
           src={image}

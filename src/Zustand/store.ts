@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-// export type FormStep = 0 | 1 | 2;
+export type FormStep = 0 | 1 | 2;
 
 interface FormStore {
   currentStep: number;

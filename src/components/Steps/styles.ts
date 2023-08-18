@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../utils/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -9,6 +8,7 @@ export const Container = styled.div`
 `;
 
 export const IconContainer = styled.div`
+  align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 `;

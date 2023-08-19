@@ -28,6 +28,8 @@ export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
 
   height: 15%;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 `;
 
 export const MainContainer = styled.div`

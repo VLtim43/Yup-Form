@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./styles";
 import { colors } from "../utils/colors";
 import useFormStore from "../../Zustand/store";
+import Button from "../Button/Button";
 
 const Form = () => {
   const { currentStep, goToStep, resetForm } = useFormStore();
@@ -29,14 +30,17 @@ const Form = () => {
       </S.MainContainer>
 
       <S.ButtonContainer backgroundColor={colors.lightCream}>
-        {currentStep > 0 && (
-          <button onClick={handlePreviousStep}>Previous</button>
-        )}
+        <Button
+          onClick={handlePreviousStep}
+          customType={currentStep == 0 ? "inactive" : "active"}
+        >
+          Back
+        </Button>
         {currentStep < 2 ? (
-          <button onClick={handleNextStep}>Next</button>
+          <Button onClick={handleNextStep}>Next</Button>
         ) : (
-          <button onClick={resetForm}>Reset</button>
-        )}
+          <Button onClick={resetForm}>Send</Button>
+        )}{" "}
       </S.ButtonContainer>
     </S.FormContainer>
   );

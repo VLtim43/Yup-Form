@@ -4,10 +4,6 @@ import { colors } from "../utils/colors";
 import { Circle } from "@phosphor-icons/react";
 import useFormStore from "../../Zustand/store";
 
-type StepsProps = {
-  activeStep: 0 | 1 | 2;
-};
-
 const Steps: React.FC = () => {
   const currentStep = useFormStore((state) => state.currentStep);
 

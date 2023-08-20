@@ -16,5 +16,4 @@ export const Input = styled.input`
 export const Label = styled.p`
   padding: 8px;
   font-size: 16px;
-  
 `;

@@ -20,10 +20,13 @@ export const IconContainer = styled.div<{ active?: boolean }>`
     flex: 1;
     color: ${colors.steelGray};
     text-transform: capitalize;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-family: serif;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @media (min-width: 1900px) {
+      font-size: 20px;
+    }
   }
 `;

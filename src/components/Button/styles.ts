@@ -6,10 +6,24 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button<{ customType?: string }>`
-  min-height: 35px;
-  min-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
   border: 0;
+  color: ${colors.lightCream};
+
+  @media (min-width: 1900px) {
+    min-height: 50px;
+    min-width: 100px;
+    font-size: 19px;
+  }
+
+  @media (max-width: 1900px) {
+    min-height: 35px;
+    min-width: 70px;
+    font-size: 15px;
+  }
 
   background-color: ${({ customType }) =>
     customType === "inactive" ? colors.darkGray : colors.lightBeige};

@@ -39,6 +39,9 @@ export const Icon = styled.div<{ color?: string }>`
 export const Header = styled.h2`
   font-size: 28px;
   color: ${colors.lightCream};
+  @media (min-width: 1900px) {
+    font-size: 40px;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -53,4 +56,11 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
   flex: 1;
+
+  img {
+    filter: blur(0.5px) opacity(70%) 16vw;
+    align-self: flex-end;
+    height: 16vw;
+    width: 16vw;
+  }
 `;

@@ -21,6 +21,13 @@ export const FormContainer = styled.div<{ backgroundColor?: string }>`
     width: 40vw;
   }
 `;
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 85%;
+  height: 85%;
+`;
 
 export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
   background-color: ${(props) => props.backgroundColor};
@@ -30,12 +37,4 @@ export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
   width: 100%;
   display: flex;
   justify-content: space-around;
-`;
-
-export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: 70%;
-  height: 85%;
 `;

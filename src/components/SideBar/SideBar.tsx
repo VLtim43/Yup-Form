@@ -21,17 +21,7 @@ const SideBar = () => {
       </S.TextContainer>
       <Steps />
       <S.ImageContainer>
-        <img
-          src={image}
-          draggable={false}
-          style={{
-            width: "16vw",
-            height: "16vw",
-            marginLeft: "50px",
-            alignSelf: "flex-end",
-            filter: "blur(0.5px) opacity(70%) ",
-          }}
-        />
+        <img src={image} draggable={false} />
       </S.ImageContainer>
     </S.SideContainer>
   );

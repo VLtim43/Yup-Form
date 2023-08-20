@@ -1,6 +1,5 @@
 import * as S from "./styles";
-import { FieldError, DeepMap, FieldValues } from "react-hook-form";
-
+import React from "react";
 type Props = {
   placeholder?: string;
   label?: string;

@@ -20,7 +20,7 @@ const Steps: React.FC = () => {
             color: currentStep === 0 ? colors.lightCream : colors.darkGray,
           }}
         >
-          Pet information
+          Owner information
         </p>
       </S.IconContainer>
       <S.IconContainer>
@@ -34,7 +34,7 @@ const Steps: React.FC = () => {
             color: currentStep === 1 ? colors.lightCream : colors.darkGray,
           }}
         >
-          Owner information
+          Pet information
         </p>
       </S.IconContainer>
       <S.IconContainer>

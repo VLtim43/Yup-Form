@@ -11,20 +11,45 @@ const Steps: React.FC = () => {
     <S.Container>
       <S.IconContainer>
         <Circle
-          size={currentStep === 0 ? 38 : 36}
-          color={colors.steelGray}
-          weight={currentStep === 0 ? "fill" : "regular"}
+          size={25}
+          color={currentStep === 0 ? colors.lightCream : colors.steelGray}
+          weight={currentStep === 0 ? "fill" : "bold"}
         />
+        <p
+          style={{
+            color: currentStep === 0 ? colors.lightCream : colors.darkGray,
+          }}
+        >
+          Pet information
+        </p>
+      </S.IconContainer>
+      <S.IconContainer>
         <Circle
-          size={currentStep === 1 ? 38 : 36}
-          color={colors.steelGray}
-          weight={currentStep === 1 ? "fill" : "regular"}
+          size={25}
+          color={currentStep === 1 ? colors.lightCream : colors.steelGray}
+          weight={currentStep === 1 ? "fill" : "bold"}
         />
+        <p
+          style={{
+            color: currentStep === 1 ? colors.lightCream : colors.darkGray,
+          }}
+        >
+          Owner information
+        </p>
+      </S.IconContainer>
+      <S.IconContainer>
         <Circle
-          size={currentStep === 2 ? 38 : 36}
-          color={colors.steelGray}
-          weight={currentStep === 2 ? "fill" : "regular"}
+          size={25}
+          color={currentStep === 2 ? colors.lightCream : colors.steelGray}
+          weight={currentStep === 2 ? "fill" : "bold"}
         />
+        <p
+          style={{
+            color: currentStep === 2 ? colors.lightCream : colors.darkGray,
+          }}
+        >
+          Review
+        </p>
       </S.IconContainer>
     </S.Container>
   );

@@ -25,8 +25,9 @@ const SideBar = () => {
           src={image}
           draggable={false}
           style={{
-            width: "240px",
-            height: "240px",
+            width: "16vw",
+            height: "16vw",
+            marginLeft: "50px",
             alignSelf: "flex-end",
             filter: "blur(0.5px) opacity(70%) ",
           }}

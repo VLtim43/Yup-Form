@@ -18,6 +18,13 @@ export const ContentContainer = styled.div`
   border-bottom-right-radius: 15px;
 `;
 
+export const InputContainer = styled.div`
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const TextContainer = styled.div`
   @media (max-width: 1400px) {
     font-size: 32px;

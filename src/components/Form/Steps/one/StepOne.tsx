@@ -6,16 +6,10 @@ import { schema } from "../../../../Schemas/Schema";
 import { colors } from "../../../utils/colors";
 import Button from "../../../Button/Button";
 import useStepStore from "../../../../Zustand/store";
+import Input from "../../../Input/Input";
 
 export const StepOne: React.FC = () => {
   const { currentStep, goToStep } = useStepStore();
-
-  const handleNextStep = () => {
-    const nextStep = currentStep + 1;
-    if (nextStep <= 2) {
-      goToStep(nextStep);
-    }
-  };
 
   const {
     register,
@@ -26,8 +20,16 @@ export const StepOne: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
+  const handleNextStep = () => {
+    const nextStep = currentStep + 1;
+    if (nextStep <= 2) {
+      goToStep(nextStep);
+    }
+  };
+
   const onSubmitHandler = (data: any) => {
     console.log({ data });
+    handleNextStep();
     reset();
   };
 
@@ -41,14 +43,10 @@ export const StepOne: React.FC = () => {
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
-
-        <input
-          {...register("email")}
-          placeholder="email"
-          type="email"
-          required
-        />
-        <p>{errors.email?.message}</p>
+        <S.InputContainer>
+          <Input label={"label"} />
+          <Input label={"label"} />
+        </S.InputContainer>
       </S.ContentContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>
         {/* <button type="submit">Sign in</button> */}

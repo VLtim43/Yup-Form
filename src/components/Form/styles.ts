@@ -21,20 +21,9 @@ export const FormContainer = styled.div<{ backgroundColor?: string }>`
     width: 40vw;
   }
 `;
-export const MainContainer = styled.div`
+
+export const StepsContainer = styled.div`
   display: flex;
+  height: 100%;
   flex-direction: column;
-  margin: auto;
-  max-width: 85%;
-  height: 85%;
-`;
-
-export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
-  background-color: ${(props) => props.backgroundColor};
-  border-bottom-right-radius: 15px;
-
-  height: 15%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
 `;

@@ -8,10 +8,10 @@ interface FormStore {
   resetForm: () => void;
 }
 
-const useFormStore = create<FormStore>((set) => ({
+const useStepStore = create<FormStore>((set) => ({
   currentStep: 0, // Initial step
   goToStep: (step) => set({ currentStep: step }),
   resetForm: () => set({ currentStep: 0 }), // Reset the form to initial step
 }));
 
-export default useFormStore;
+export default useStepStore;

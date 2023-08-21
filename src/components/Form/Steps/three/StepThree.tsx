@@ -7,7 +7,7 @@ import { colors } from "../../../utils/colors";
 import Button from "../../../Button/Button";
 import useStepStore from "../../../../Zustand/store";
 
-export const StepOne: React.FC = () => {
+export const StepThree: React.FC = () => {
   const { currentStep, goToStep } = useStepStore();
 
   const handleNextStep = () => {

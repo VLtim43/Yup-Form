@@ -32,30 +32,28 @@ export const StepOne: React.FC = () => {
   };
 
   return (
-    <>
-      <S.MainContainer>
+    <S.MainContainer
+      onSubmit={handleSubmit(onSubmitHandler)}
+      noValidate
+      autoComplete="false"
+    >
+      <S.ContentContainer>
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
-        <form
-          onSubmit={handleSubmit(onSubmitHandler)}
-          noValidate
-          autoComplete="false"
-        >
-          <input
-            {...register("email")}
-            placeholder="email"
-            type="email"
-            required
-          />
-          <p>{errors.email?.message}</p>
 
-          <button type="submit">Sign in</button>
-        </form>
-      </S.MainContainer>
+        <input
+          {...register("email")}
+          placeholder="email"
+          type="email"
+          required
+        />
+        <p>{errors.email?.message}</p>
+      </S.ContentContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>
-        <Button onClick={handleNextStep}>Next</Button>
+        {/* <button type="submit">Sign in</button> */}
+        <Button type="submit">Next</Button>
       </S.ButtonContainer>
-    </>
+    </S.MainContainer>
   );
 };

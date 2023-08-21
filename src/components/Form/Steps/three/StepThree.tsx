@@ -8,12 +8,11 @@ import Button from "../../../Button/Button";
 import useStepStore from "../../../../Zustand/store";
 
 export const StepThree: React.FC = () => {
-  const { currentStep, goToStep } = useStepStore();
+  const { currentStep, resetForm } = useStepStore();
 
   const handleNextStep = () => {
-    const nextStep = currentStep + 1;
-    if (nextStep <= 2) {
-      goToStep(nextStep);
+    if (currentStep == 2) {
+      resetForm();
     }
   };
 
@@ -54,7 +53,7 @@ export const StepThree: React.FC = () => {
         </form>
       </S.MainContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>
-        <Button onClick={handleNextStep}>Next</Button>
+        <Button onClick={handleNextStep}>Send</Button>
       </S.ButtonContainer>
     </>
   );

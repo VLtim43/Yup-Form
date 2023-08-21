@@ -1,18 +1,31 @@
 import styled from "styled-components";
 import { colors } from "../../../utils/colors";
 
-export const MainContainer = styled.div`
-  padding: 60px 20px;
+export const MainContainer = styled.form`
+  height: 100%;
   display: flex;
-  height: 85%;
   flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const ContentContainer = styled.div`
+  @media (max-width: 1400px) {
+    padding: 30px 40px;
+  }
+
+  padding: 60px 60px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 `;
 
 export const TextContainer = styled.div`
+  @media (max-width: 1400px) {
+    font-size: 32px;
+  }
+
+  font-size: 50px;
+
   display: flex;
-  font-size: 40px;
   color: ${colors.darkSlateBlue};
   font-weight: bold;
 `;

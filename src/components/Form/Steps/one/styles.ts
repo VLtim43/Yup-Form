@@ -10,7 +10,7 @@ export const MainContainer = styled.form`
 
 export const ContentContainer = styled.div`
   @media (max-width: 1400px) {
-    padding: 30px 40px;
+    padding: 40px 40px;
   }
 
   padding: 60px 60px;
@@ -31,6 +31,7 @@ export const TextContainer = styled.div`
   }
 
   font-size: 50px;
+  margin-bottom: 20px;
 
   display: flex;
   color: ${colors.darkSlateBlue};

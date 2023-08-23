@@ -11,7 +11,7 @@ const Form = () => {
   const { currentStep } = useStepStore();
 
   return (
-    <S.FormContainer backgroundColor={colors.palePink}>
+    <S.FormContainer backgroundColor={colors.lightCream}>
       <S.StepsContainer>
         {currentStep === 0 && <StepOne />}
         {currentStep === 1 && <StepTwo />}

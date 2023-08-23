@@ -24,16 +24,19 @@ export const StepOne = () => {
   };
 
   return (
-    <S.MainContainer
-      onSubmit={handleSubmit(onSubmitHandler)}
-      noValidate
-      autoComplete="false"
-    >
+    <S.MainContainer onSubmit={handleSubmit(onSubmitHandler)} noValidate>
       <S.ContentContainer>
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
         <S.InputContainer>
+          <Input
+            type="email"
+            label="Email"
+            placeholder="Enter your email"
+            register={register("email")}
+            errors={errors.email}
+          />
           <Input
             type="email"
             label="Email"

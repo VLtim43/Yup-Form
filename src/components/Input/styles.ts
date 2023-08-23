@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 25px;
 `;
 
 export const Input = styled.input`
@@ -13,12 +14,12 @@ export const Input = styled.input`
 
   border-radius: 4px;
   outline: none;
-  padding: 8px;
+  padding: 10px 6px;
   font-size: 16px;
   width: 85%;
 
   &::placeholder {
-    font-size: 14px;
+    font-size: 15px;
     color: ${colors.lightBeige};
   }
 `;

@@ -9,9 +9,11 @@ export const Container = styled.div`
 
 export const Input = styled.input`
   border: 2px solid ${colors.palePink};
-  border-radius: 3px;
+  color: ${colors.lightBeige};
+
+  border-radius: 4px;
   outline: none;
-  padding: 8px 5px;
+  padding: 8px;
   font-size: 16px;
   width: 85%;
 
@@ -35,5 +37,5 @@ export const ErrorMessage = styled.p`
   text-transform: capitalize;
   color: ${colors.darkSlateBlue};
   font-size: 14px;
-  margin: 4px 1px;
+  margin: 4px 2px;
 `;

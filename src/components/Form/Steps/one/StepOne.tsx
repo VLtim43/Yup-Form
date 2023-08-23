@@ -31,18 +31,17 @@ export const StepOne = () => {
         </S.TextContainer>
         <S.InputContainer>
           <Input
-            type="email"
-            label="Email"
-            placeholder="Enter your email"
-            register={register("email")}
-            errors={errors.email}
+            type="text"
+            label="First Name"
+            placeholder="Enter your First Name"
+            register={register("firstName")}
+            errors={errors.firstName}
           />
           <Input
-            type="email"
-            label="Email"
-            placeholder="Enter your email"
-            register={register("email")}
-            errors={errors.email}
+            type="text"
+            label="Last Name"
+            placeholder="Enter your Last Name"
+            register={register("lastName")}
           />
         </S.InputContainer>
       </S.ContentContainer>

@@ -13,8 +13,8 @@ type Props = {
     | "reset";
   placeholder?: string;
   label: string;
-  register: any; // Pass the register function from react-hook-form
-  errors: DeepMap<any, FieldError>; // Pass the errors object from react-hook-form
+  register: any;
+  errors?: DeepMap<any, FieldError>;
 };
 
 const Input: React.FC<Props> = ({
@@ -27,11 +27,7 @@ const Input: React.FC<Props> = ({
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
-      <S.Input
-        type={type}
-        placeholder={placeholder}
-        {...register} // Spread the register function to bind it to the input
-      />
+      <S.Input type={type} placeholder={placeholder} {...register} />
       {errors && <S.ErrorMessage>{errors.message}</S.ErrorMessage>}
     </S.Container>
   );

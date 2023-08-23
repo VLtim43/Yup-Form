@@ -20,7 +20,6 @@ export const ContentContainer = styled.div`
 
 export const InputContainer = styled.div`
   flex-direction: row;
-  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 `;

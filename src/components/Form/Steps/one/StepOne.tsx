@@ -5,32 +5,22 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../../../../Schemas/Schema";
 import { colors } from "../../../utils/colors";
 import Button from "../../../Button/Button";
-import useStepStore from "../../../../Zustand/store";
 import Input from "../../../Input/Input";
 
-export const StepOne: React.FC = () => {
-  const { currentStep, goToStep } = useStepStore();
+export const StepOne = () => {
+  // Define your Yup schema here
+  // const schema = ...
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema), // Provide your Yup schema here
   });
 
-  const handleNextStep = () => {
-    const nextStep = currentStep + 1;
-    if (nextStep <= 2) {
-      goToStep(nextStep);
-    }
-  };
-
   const onSubmitHandler = (data: any) => {
-    console.log({ data });
-    handleNextStep();
-    reset();
+    window.alert(data); // Do something with the form data
   };
 
   return (
@@ -44,14 +34,20 @@ export const StepOne: React.FC = () => {
           Hello! Tell us a little about yourself
         </S.TextContainer>
         <S.InputContainer>
-          <Input label={"label"} />
-          <Input label={"label"} />
+          <Input
+            type="email"
+            label="Email"
+            placeholder="Enter your email"
+            register={register("email")}
+            errors={errors.email}
+          />
         </S.InputContainer>
       </S.ContentContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>
-        {/* <button type="submit">Sign in</button> */}
-        <Button type="submit">Next</Button>
+        <Button type="submit">Sign in</Button>
       </S.ButtonContainer>
     </S.MainContainer>
   );
 };
+
+export default StepOne;

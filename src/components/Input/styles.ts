@@ -9,15 +9,28 @@ export const Container = styled.div`
   height: calc(1.5em + 40px + 14px + 10px);
 `;
 
+export const InputWrapper = styled.div`
+  width: 85%;
+  position: relative;
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+`;
+
 export const Input = styled.input`
   border: 2px solid ${colors.palePink};
   color: ${colors.lightBeige};
-
   border-radius: 4px;
   outline: none;
   padding: 10px 6px;
+
   font-size: 16px;
-  width: 85%;
 
   &::placeholder {
     font-size: 15px;

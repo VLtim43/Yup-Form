@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 25px;
+  height: calc(1.5em + 40px + 14px + 10px);
 `;
 
 export const Input = styled.input`
@@ -39,4 +40,6 @@ export const ErrorMessage = styled.p`
   color: ${colors.darkSlateBlue};
   font-size: 14px;
   margin: 4px 2px;
+  height: 14px; /* Reserve space for one line of text */
+  line-height: 14px;
 `;

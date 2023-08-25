@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import { FieldError, DeepMap } from "react-hook-form";
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
   label: string;
   register: any;
   errors?: DeepMap<any, FieldError>;
-};
+} & InputHTMLAttributes<HTMLInputElement>; // Extend Props with InputHTMLAttributes
 
 const Input: React.FC<Props> = ({
   type = "text",
@@ -23,11 +23,17 @@ const Input: React.FC<Props> = ({
   label,
   register,
   errors,
+  ...restProps // Rest of the input props
 }) => {
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
-      <S.Input type={type} placeholder={placeholder} {...register} />
+      <S.Input
+        type={type}
+        placeholder={placeholder}
+        {...register}
+        {...restProps}
+      />
       {errors && <S.ErrorMessage>{errors.message}</S.ErrorMessage>}
     </S.Container>
   );

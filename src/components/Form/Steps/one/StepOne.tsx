@@ -36,19 +36,7 @@ export const StepOne = () => {
             placeholder="Enter your First Name"
             register={register("firstName")}
             errors={errors.firstName}
-          />
-          <Input
-            type="text"
-            label="Last Name"
-            placeholder="Enter your Last Name"
-            register={register("lastName")}
-          />
-          <Input
-            type="text"
-            label="First Name"
-            placeholder="Enter your First Name"
-            register={register("firstName")}
-            errors={errors.firstName}
+            style={{ textTransform: "capitalize" }}
           />
           <Input
             type="text"

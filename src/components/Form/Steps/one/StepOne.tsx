@@ -6,43 +6,49 @@ import { schema } from "../../../../Schemas/Schema";
 import { colors } from "../../../utils/colors";
 import Button from "../../../Button/Button";
 import Input from "../../../Input/Input";
+import useStepStore from "../../../../Zustand/store";
 
 export const StepOne = () => {
-  // Define your Yup schema here
-  // const schema = ...
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema), // Provide your Yup schema here
+    resolver: yupResolver(schema),
   });
 
-  const onSubmitHandler = (data: any) => {
-    window.alert(data); // Do something with the form data
+  const { currentStep, goToStep } = useStepStore();
+
+  const handleNextStep = () => {
+    const nextStep = currentStep + 1;
+    if (nextStep <= 2) {
+      goToStep(nextStep);
+    }
+  };
+
+  const onInvalid = (errors: any) => console.error(errors);
+  const onSubmitHandler = () => {
+    console.log("submit");
+    handleNextStep();
   };
 
   return (
-    <S.MainContainer onSubmit={handleSubmit(onSubmitHandler)} noValidate>
+    <S.MainContainer
+      onSubmit={handleSubmit(onSubmitHandler, onInvalid)}
+      noValidate
+    >
       <S.ContentContainer>
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
         <S.InputContainer>
           <Input
+            register={register("firstName")}
             type="text"
             label="First Name"
             placeholder="Enter your First Name"
-            register={register("firstName")}
             errors={errors.firstName}
             style={{ textTransform: "capitalize" }}
-          />
-          <Input
-            type="text"
-            label="Last Name"
-            placeholder="Enter your Last Name"
-            register={register("lastName")}
           />
         </S.InputContainer>
       </S.ContentContainer>

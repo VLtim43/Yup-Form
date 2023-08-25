@@ -24,9 +24,9 @@ const Input: React.FC<Props> = ({
   type = "text",
   placeholder,
   label,
-  register,
   errors,
-  ...restProps // Rest of the input props
+  register,
+  ...restProps
 }) => {
   const [inputIcon, setInputIcon] = useState(true);
 
@@ -51,10 +51,10 @@ const Input: React.FC<Props> = ({
           />
         </S.IconWrapper>
         <S.Input
-          type={type}
-          placeholder={placeholder}
           {...register}
           {...restProps}
+          type={type}
+          placeholder={placeholder}
           onChange={handleInputChange}
         />
       </S.InputWrapper>

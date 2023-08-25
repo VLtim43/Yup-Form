@@ -2,6 +2,7 @@ import { IdentificationBadge } from "@phosphor-icons/react";
 import * as S from "./styles";
 import React, { InputHTMLAttributes, useState } from "react";
 import { FieldError, DeepMap } from "react-hook-form";
+import { colors } from "../utils/colors";
 
 type Props = {
   type?:
@@ -42,7 +43,11 @@ const Input: React.FC<Props> = ({
         <S.IconWrapper>
           <IdentificationBadge
             size={25}
-            style={{ visibility: inputIcon ? "initial" : "hidden" }}
+            style={{
+              visibility: inputIcon ? "initial" : "hidden",
+              cursor: "text",
+            }}
+            color={colors.lightBeige}
           />
         </S.IconWrapper>
         <S.Input

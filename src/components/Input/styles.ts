@@ -21,6 +21,8 @@ export const IconWrapper = styled.div`
   transform: translateY(-50%);
   display: flex;
   align-items: center;
+
+  opacity: 40%;
 `;
 
 export const Input = styled.input`

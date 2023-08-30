@@ -35,7 +35,8 @@ export const StepOne = () => {
   return (
     <S.MainContainer
       onSubmit={handleSubmit(onSubmitHandler, onInvalid)}
-      noValidate
+      //@ts-ignore
+      autocomplete="off"
     >
       <S.ContentContainer>
         <S.TextContainer>
@@ -49,6 +50,27 @@ export const StepOne = () => {
             placeholder="Enter your First Name"
             errors={errors.firstName}
             style={{ textTransform: "capitalize" }}
+          />
+          <Input
+            register={register("lastName")}
+            type="text"
+            label="Last Name"
+            placeholder="Enter your last Name"
+            errors={errors.lastName}
+          />
+          <Input
+            register={register("email")}
+            type="text"
+            label="Email"
+            placeholder="Enter your email "
+            errors={errors.email}
+          />
+          <Input
+            register={register("phoneNumber")}
+            type="tel"
+            label="Phone Number"
+            placeholder="Enter your Phone Number "
+            errors={errors.phoneNumber}
           />
         </S.InputContainer>
       </S.ContentContainer>

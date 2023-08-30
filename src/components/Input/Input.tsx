@@ -12,6 +12,7 @@ type Props = {
     | "number"
     | "button"
     | "submit"
+    | "tel"
     | "reset";
 
   placeholder?: string;
@@ -51,6 +52,7 @@ const Input: React.FC<Props> = ({
           />
         </S.IconWrapper>
         <S.Input
+          autoComplete="false"
           {...register}
           {...restProps}
           type={type}
@@ -58,7 +60,11 @@ const Input: React.FC<Props> = ({
           onChange={handleInputChange}
         />
       </S.InputWrapper>
-      {errors && <S.ErrorMessage>{errors.message}</S.ErrorMessage>}
+      {errors && (
+        <S.ErrorMessage className="animate__animated animate__fadeInUp animate__faster ">
+          {errors.message}
+        </S.ErrorMessage>
+      )}
     </S.Container>
   );
 };

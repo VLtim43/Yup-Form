@@ -45,7 +45,7 @@ export const StepOne = () => {
         <S.InputContainer>
           <Input
             register={register("firstName")}
-            type="text"
+            type="firstname"
             label="First Name"
             placeholder="Enter your First Name"
             errors={errors.firstName}
@@ -53,24 +53,26 @@ export const StepOne = () => {
           />
           <Input
             register={register("lastName")}
-            type="text"
+            type="lastname"
             label="Last Name"
             placeholder="Enter your last Name"
             errors={errors.lastName}
+            style={{ textTransform: "capitalize" }}
           />
           <Input
             register={register("email")}
-            type="text"
+            type="email"
             label="Email"
-            placeholder="Enter your email "
+            placeholder="Enter your Email"
             errors={errors.email}
           />
           <Input
             register={register("phoneNumber")}
-            type="tel"
-            label="Phone Number"
-            placeholder="Enter your Phone Number "
+            type="phonenumber"
+            label="First Name"
+            placeholder="88888-8888"
             errors={errors.phoneNumber}
+            style={{ textTransform: "capitalize" }}
           />
         </S.InputContainer>
       </S.ContentContainer>

@@ -2,7 +2,25 @@ import { IdentificationBadge } from "@phosphor-icons/react";
 import * as S from "./styles";
 import React, { InputHTMLAttributes, useState } from "react";
 import { FieldError, DeepMap } from "react-hook-form";
-import { colors } from "../utils/colors";
+import Icon from "../Icon/Icon";
+
+const getInputType = (type: string): string => {
+  switch (type) {
+    case "firstname":
+    case "lastname":
+      return "text";
+    case "password":
+      return "password";
+    case "email":
+      return "email";
+    case "number":
+      return "number";
+    case "phonenumber":
+      return "tel";
+    default:
+      return "text";
+  }
+};
 
 type Props = {
   type?:
@@ -10,16 +28,15 @@ type Props = {
     | "password"
     | "email"
     | "number"
-    | "button"
-    | "submit"
-    | "tel"
-    | "reset";
-
+    | "phonenumber"
+    | "reset"
+    | "firstname"
+    | "lastname";
   placeholder?: string;
   label: string;
   register: any;
   errors?: DeepMap<any, FieldError>;
-} & InputHTMLAttributes<HTMLInputElement>; // Extend Props with InputHTMLAttributes
+} & InputHTMLAttributes<HTMLInputElement>;
 
 const Input: React.FC<Props> = ({
   type = "text",
@@ -31,8 +48,22 @@ const Input: React.FC<Props> = ({
 }) => {
   const [inputIcon, setInputIcon] = useState(true);
 
+  const maskPhoneNumber = (value: string) => {
+    let masked = value.replace(/\D/g, "");
+    if (masked.length > 2) {
+      masked = "(" + masked.substring(0, 2) + ") - " + masked.substring(2);
+    }
+    return masked;
+  };
+
   const handleInputChange = (event: any) => {
-    const inputValue = event.target.value;
+    let inputValue = event.target.value;
+    if (type === "number" && /\D/.test(inputValue)) {
+      event.target.value = inputValue.replace(/\D/g, "");
+    }
+    if (type === "phonenumber") {
+      event.target.value = maskPhoneNumber(inputValue);
+    }
     setInputIcon(!inputValue);
   };
 
@@ -42,20 +73,13 @@ const Input: React.FC<Props> = ({
 
       <S.InputWrapper>
         <S.IconWrapper>
-          <IdentificationBadge
-            size={25}
-            style={{
-              visibility: inputIcon ? "initial" : "hidden",
-              cursor: "text",
-            }}
-            color={colors.lightBeige}
-          />
+          <Icon type={type} isVisible={inputIcon} />
         </S.IconWrapper>
         <S.Input
           autoComplete="false"
           {...register}
           {...restProps}
-          type={type}
+          type={getInputType(type)}
           placeholder={placeholder}
           onChange={handleInputChange}
         />

@@ -5,12 +5,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 25px;
   height: calc(1.5em + 60px + 14px + 10px);
+  margin-bottom: 25px;
 
   @media (max-width: 1400px) {
-    margin-bottom: 25px;
     height: calc(1.5em + 40px + 14px + 10px);
+    margin-bottom: 15px;
   }
 `;
 
@@ -56,7 +56,7 @@ export const Input = styled.input`
     color: ${colors.lightBeige};
 
     @media (max-width: 1400px) {
-      font-size: 15px;
+      font-size: 17px;
     }
   }
 `;

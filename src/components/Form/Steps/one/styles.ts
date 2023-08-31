@@ -10,10 +10,10 @@ export const MainContainer = styled.form`
 
 export const ContentContainer = styled.div`
   @media (max-width: 1400px) {
-    padding: 40px 40px;
+    padding: 40px 38px;
   }
 
-  padding: 60px 60px;
+  padding: 60px 80px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 `;

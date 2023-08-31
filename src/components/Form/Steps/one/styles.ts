@@ -28,6 +28,7 @@ export const InputContainer = styled.div`
 export const TextContainer = styled.div`
   @media (max-width: 1400px) {
     font-size: 32px;
+    margin-bottom: 40px;
   }
 
   font-size: 50px;

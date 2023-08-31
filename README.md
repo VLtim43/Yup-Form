@@ -21,3 +21,7 @@ This project is a simple multistep form built using React and TypeScript. It was
 ## UI Design
 
 The UI design of this project is based on the [Pawtastic UI Kit](https://www.behance.net/gallery/62932019/Pawtastic-UI-Kit-for-Adobe-XD) for Adobe XD. The project's components and styling draw inspiration from this UI kit.
+
+
+![image](https://github.com/VLtim43/Yup-Form/assets/69370181/ead5779f-04b6-4395-a405-2055af9a12c5)
+

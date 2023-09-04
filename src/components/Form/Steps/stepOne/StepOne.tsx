@@ -16,7 +16,7 @@ export const StepOne = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
+  const onInvalid = (errors: any) => console.error(errors);
   const { currentStep, goToStep } = useStepStore();
 
   const handleNextStep = () => {
@@ -26,7 +26,6 @@ export const StepOne = () => {
     }
   };
 
-  const onInvalid = (errors: any) => console.error(errors);
   const onSubmitHandler = () => {
     console.log("submit");
     handleNextStep();
@@ -42,37 +41,40 @@ export const StepOne = () => {
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
+
         <S.InputContainer>
           <Input
+            icon="name"
+            type="text"
             register={register("firstName")}
-            type="firstname"
             label="First Name"
             placeholder="Enter your First Name"
             errors={errors.firstName}
             style={{ textTransform: "capitalize" }}
           />
           <Input
+            icon="name"
+            type="text"
             register={register("lastName")}
-            type="lastname"
             label="Last Name"
-            placeholder="Enter your last Name"
+            placeholder="Enter your Last Name"
             errors={errors.lastName}
-            style={{ textTransform: "capitalize" }}
           />
           <Input
+            icon="email"
+            type="text"
             register={register("email")}
-            type="email"
-            label="Email"
+            label="your Email"
             placeholder="Enter your Email"
             errors={errors.email}
           />
           <Input
+            icon="phonenumber"
+            type="telephone"
             register={register("phoneNumber")}
-            type="phonenumber"
-            label="First Name"
+            label="Your Phone number"
             placeholder="88888-8888"
             errors={errors.phoneNumber}
-            style={{ textTransform: "capitalize" }}
           />
         </S.InputContainer>
       </S.ContentContainer>

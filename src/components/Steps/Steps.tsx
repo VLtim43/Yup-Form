@@ -11,7 +11,7 @@ const Steps: React.FC = () => {
     <S.Container>
       <S.IconContainer>
         <Circle
-          size={25}
+          size={23}
           color={currentStep === 0 ? colors.lightCream : colors.steelGray}
           weight={currentStep === 0 ? "fill" : "bold"}
         />
@@ -25,7 +25,7 @@ const Steps: React.FC = () => {
       </S.IconContainer>
       <S.IconContainer>
         <Circle
-          size={25}
+          size={23}
           color={currentStep === 1 ? colors.lightCream : colors.steelGray}
           weight={currentStep === 1 ? "fill" : "bold"}
         />
@@ -39,7 +39,7 @@ const Steps: React.FC = () => {
       </S.IconContainer>
       <S.IconContainer>
         <Circle
-          size={25}
+          size={23}
           color={currentStep === 2 ? colors.lightCream : colors.steelGray}
           weight={currentStep === 2 ? "fill" : "bold"}
         />

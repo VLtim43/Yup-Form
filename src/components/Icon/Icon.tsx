@@ -1,27 +1,18 @@
 import { IdentificationBadge, Phone, Envelope } from "@phosphor-icons/react";
 import React from "react";
 import { colors } from "../utils/colors";
-
-type IconType =
-  | "name"
-  | "number"
-  | "firstname"
-  | "lastname"
-  | "email"
-  | "phonenumber";
+import { IconType } from "../utils/types";
 
 interface IconProps {
-  type: IconType;
+  name: IconType | undefined;
   isVisible: boolean;
 }
 
-const Icon: React.FC<IconProps> = ({ type, isVisible }) => {
+const Icon: React.FC<IconProps> = ({ name, isVisible }) => {
   const visibilityStyle = isVisible ? "initial" : "hidden";
 
-  switch (type) {
+  switch (name) {
     case "name":
-    case "firstname":
-    case "lastname":
       return (
         <IdentificationBadge
           size={25}
@@ -46,7 +37,7 @@ const Icon: React.FC<IconProps> = ({ type, isVisible }) => {
         />
       );
     default:
-      return <span style={{ visibility: visibilityStyle }}>❓</span>;
+      return <span style={{ visibility: visibilityStyle }}></span>;
   }
 };
 

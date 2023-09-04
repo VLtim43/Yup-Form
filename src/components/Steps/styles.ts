@@ -6,7 +6,11 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-left: 78px;
+  margin-left: 50px;
+
+  @media (max-width: 1400px) {
+    margin-left: 100px;
+  }
 `;
 
 export const IconContainer = styled.div<{ active?: boolean }>`
@@ -15,7 +19,6 @@ export const IconContainer = styled.div<{ active?: boolean }>`
   align-items: center;
   gap: 10px;
   width: 250px;
-
   p {
     flex: 1;
     color: ${colors.steelGray};
@@ -24,9 +27,10 @@ export const IconContainer = styled.div<{ active?: boolean }>`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 20px;
 
-    @media (min-width: 1900px) {
-      font-size: 20px;
+    @media (max-width: 1400px) {
+      font-size: 15px;
     }
   }
 `;

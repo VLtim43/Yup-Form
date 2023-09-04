@@ -49,6 +49,10 @@ export const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 30px 30px 12px 30px;
+
+  @media (min-width: 1300px) {
+    padding: 30px;
+  }
 `;
 
 export const ImageContainer = styled.div`

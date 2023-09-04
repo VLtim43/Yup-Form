@@ -3,9 +3,9 @@ import * as S from "./styles";
 import { colors } from "../utils/colors";
 import useStepStore from "../../Zustand/store";
 
-import { StepOne } from "./Steps/one/StepOne";
-import { StepTwo } from "./Steps/two/StepTwo";
-import { StepThree } from "./Steps/three/StepThree";
+import { StepOne } from "./Steps/stepOne/StepOne";
+import { StepTwo } from "./Steps/stepTwo/StepTwo";
+import { StepThree } from "./Steps/stepThree/StepThree";
 
 const Form = () => {
   const { currentStep } = useStepStore();

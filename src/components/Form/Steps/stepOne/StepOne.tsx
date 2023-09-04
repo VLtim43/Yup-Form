@@ -16,7 +16,7 @@ export const StepOne = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
+  const onInvalid = (errors: any) => console.error(errors);
   const { currentStep, goToStep } = useStepStore();
 
   const handleNextStep = () => {
@@ -26,7 +26,6 @@ export const StepOne = () => {
     }
   };
 
-  const onInvalid = (errors: any) => console.error(errors);
   const onSubmitHandler = () => {
     console.log("submit");
     handleNextStep();
@@ -42,6 +41,13 @@ export const StepOne = () => {
         <S.TextContainer>
           Hello! Tell us a little about yourself
         </S.TextContainer>
+
+        <S.InputContainer>
+          <Input label={"aaaa"} register={undefined} icon="phonenumber" />
+          <Input label={"aaaa"} register={undefined} icon="name" />
+          <Input label={"aaaa"} register={undefined} icon="name" />
+          <Input label={"aaaa"} register={undefined} icon="email" />
+        </S.InputContainer>
       </S.ContentContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>
         <Button type="submit">Sign in</Button>

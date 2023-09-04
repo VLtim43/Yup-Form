@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styles";
 import { colors } from "../utils/colors";
 import image from "../../assets/duotone5.png";

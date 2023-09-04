@@ -7,13 +7,13 @@ export const colors = {
   darkSlateBlue: "#545871",
 
   // Muteds/Grayish
-  palePink: "#f1d8d5",
+  palePink: "#f4dedb",
   lightBeige: "#D3A5A3",
   mutedLavender: "#A698A1",
   steelGray: "#9496a6",
 
   // Lights
   lightGray: "#847885",
-  lightCream: "#f3e1df",
+  lightCream: "#f6e8e7",
   offWhite: "#fefeff",
 } as const;

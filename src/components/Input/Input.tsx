@@ -4,10 +4,10 @@ import { FieldError, DeepMap } from "react-hook-form";
 import Icon from "../Icon/Icon";
 import { useInputIcon } from "../utils/inputHandler";
 import { IconType } from "../utils/types";
+import { usePhoneNumberMask } from "../utils/phoneMask";
 
 enum InputType {
-  firstName = "text",
-  lastName = "text",
+  text = "text",
   telephone = "tel",
   email = "email",
   password = "password",
@@ -38,6 +38,15 @@ const Input: React.FC<Props> = ({
     return InputType[type] || "text";
   };
 
+  const applyPhoneMask = usePhoneNumberMask();
+
+  const handlePhoneMask = (type: keyof typeof InputType) => (event: any) => {
+    handleInputChange(type)(event);
+    if (type === "telephone") {
+      applyPhoneMask(event);
+    }
+  };
+
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
@@ -52,7 +61,7 @@ const Input: React.FC<Props> = ({
           {...restProps}
           type={getInputType(type as keyof typeof InputType)}
           placeholder={placeholder}
-          onChange={handleInputChange(type as keyof typeof InputType)}
+          onChange={handlePhoneMask(type as keyof typeof InputType)}
         />
       </S.InputWrapper>
       {errors && (

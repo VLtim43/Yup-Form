@@ -41,12 +41,14 @@ export const IconWrapper = styled.div`
 export const Input = styled.input`
   border: 2px solid ${colors.palePink};
   color: ${colors.lightBeige};
-  border-radius: 4px;
+  border-radius: 8px;
   outline: none;
   padding: 15px 10px;
   font-size: 20px;
 
   @media (max-width: 1400px) {
+    border-radius: 4px;
+
     padding: 10px 6px;
     font-size: 16px;
   }
@@ -84,7 +86,7 @@ export const ErrorMessage = styled.p`
 
   @media (max-width: 1400px) {
     font-size: 14px;
-    margin: 4px 2px;
+    margin: 8px 2px;
     height: 14px;
     line-height: 14px;
   }

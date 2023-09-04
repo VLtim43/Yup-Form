@@ -21,13 +21,13 @@ export const ContentContainer = styled.div`
 export const InputContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
 `;
 
 export const TextContainer = styled.div`
   @media (max-width: 1400px) {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   font-size: 50px;

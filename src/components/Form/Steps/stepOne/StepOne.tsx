@@ -43,10 +43,39 @@ export const StepOne = () => {
         </S.TextContainer>
 
         <S.InputContainer>
-          <Input label={"aaaa"} register={undefined} icon="phonenumber" />
-          <Input label={"aaaa"} register={undefined} icon="name" />
-          <Input label={"aaaa"} register={undefined} icon="name" />
-          <Input label={"aaaa"} register={undefined} icon="email" />
+          <Input
+            icon="name"
+            type="text"
+            register={register("firstName")}
+            label="First Name"
+            placeholder="Enter your First Name"
+            errors={errors.firstName}
+            style={{ textTransform: "capitalize" }}
+          />
+          <Input
+            icon="name"
+            type="text"
+            register={register("lastName")}
+            label="Last Name"
+            placeholder="Enter your Last Name"
+            errors={errors.lastName}
+          />
+          <Input
+            icon="email"
+            type="text"
+            register={register("email")}
+            label="your Email"
+            placeholder="Enter your Email"
+            errors={errors.email}
+          />
+          <Input
+            icon="phonenumber"
+            type="telephone"
+            register={register("phoneNumber")}
+            label="Your Phone number"
+            placeholder="88888-8888"
+            errors={errors.phoneNumber}
+          />
         </S.InputContainer>
       </S.ContentContainer>
       <S.ButtonContainer backgroundColor={colors.lightCream}>

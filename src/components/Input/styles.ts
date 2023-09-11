@@ -30,10 +30,11 @@ export const IconWrapper = styled.div`
   opacity: 40%;
 
   @media (min-width: 1400px) {
+    margin-right: 5px;
     margin-bottom: 25px;
     height: calc(1.5em + 40px + 14px + 10px);
     svg {
-      transform: scale(1.4);
+      transform: scale(1.3);
     }
   }
 `;

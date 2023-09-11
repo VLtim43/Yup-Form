@@ -6,8 +6,16 @@ export const usePhoneNumberMask = () => {
 
   const maskPhoneNumber = (value: string) => {
     let masked = value.replace(/\D/g, "");
-    if (masked.length > 2) {
-      masked = "(" + masked.substring(0, 2) + ") - " + masked.substring(2);
+    if (masked.length > 2 && masked.length <= 6) {
+      masked = "(" + masked.substring(0, 2) + ") " + masked.substring(2);
+    } else if (masked.length > 6) {
+      masked =
+        "(" +
+        masked.substring(0, 2) +
+        ") " +
+        masked.substring(2, 6) +
+        "-" +
+        masked.substring(6);
     }
     return masked;
   };

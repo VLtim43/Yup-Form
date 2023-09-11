@@ -31,7 +31,7 @@ export const TextContainer = styled.div`
   }
 
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 
   display: flex;
   color: ${colors.darkSlateBlue};

@@ -1,8 +1,7 @@
-import FormPage from "./components/pages/FormPage";
 function App() {
   return (
     <>
-      <FormPage />
+      <p>test</p>
     </>
   );
 }

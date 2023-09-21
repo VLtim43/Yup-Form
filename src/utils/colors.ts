@@ -5,7 +5,7 @@ export const colors = {
   grayishBlue: "#5B5566",
 
   // lights
-  palePink: "#f7ebeb",
-  lightCream: "#f6e8e7",
+  palePink: "#f4dedb",
+  lightCream: "#e3ccc9",
   offWhite: "#fefeff",
 } as const;

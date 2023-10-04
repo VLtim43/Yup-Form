@@ -15,7 +15,7 @@ export default {
         offWhite: "#fefeff",
       },
       fontFamily: {
-        young: ["Young Serif", "serif"],
+        young: ["Noto Serif", "serif"],
       },
     },
   },

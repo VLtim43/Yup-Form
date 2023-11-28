@@ -32,7 +32,7 @@ export const Form1 = () => {
 
   return (
     <div className="p-10 w-full h-full flex flex-col content-center">
-      <h1 className="text-deeperBlue  font-young text-4xl font-bold">
+      <h1 className="text-deeperBlue  font-young text-4xl font-bold ">
         Hello! Tell us a little about yourself
       </h1>
       <form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
